@@ -2,7 +2,9 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import CategoryNav from "@/components/CategoryNav";
 import { findProduct, getCategory } from "@/data/products";
+import { getProductImage } from "@/data/productImages";
 
 const ProductDetail = () => {
   const { categoryKey, slug } = useParams();
@@ -25,8 +27,9 @@ const ProductDetail = () => {
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
-      <section className="pt-32 pb-20">
-        <div className="mx-auto max-w-4xl px-6 lg:px-12">
+      <CategoryNav />
+      <section className="pt-10 pb-20">
+        <div className="mx-auto max-w-5xl px-6 lg:px-12">
           <Link
             to={`/products/${category.key}`}
             className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent"
@@ -34,13 +37,28 @@ const ProductDetail = () => {
             <ArrowLeft className="h-4 w-4" /> {category.kr} 목록으로
           </Link>
 
-          <div className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.25em] text-accent">
-            {category.en} · {product.cat}
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-start">
+            <div>
+              <div className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+                {category.en} · {product.cat}
+              </div>
+              <h1 className="text-balance text-4xl font-medium tracking-tight text-ink md:text-5xl">
+                {product.name}
+              </h1>
+              <div className="mt-3 font-mono text-base text-muted-foreground">{product.formula}</div>
+            </div>
+            {getProductImage(product.name) && (
+              <div className="overflow-hidden border border-border bg-muted">
+                <img
+                  src={getProductImage(product.name)}
+                  alt={product.name}
+                  width={800}
+                  height={800}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            )}
           </div>
-          <h1 className="text-balance text-4xl font-medium tracking-tight text-ink md:text-5xl">
-            {product.name}
-          </h1>
-          <div className="mt-3 font-mono text-base text-muted-foreground">{product.formula}</div>
 
           <div className="mt-8 flex flex-wrap gap-2">
             {product.tags.map((t) => (
