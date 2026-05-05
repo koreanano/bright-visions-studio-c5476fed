@@ -10,6 +10,7 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
+      <div id="top" />
       <HeroSlider />
       <TrustMarquee />
       <StatsBand />
