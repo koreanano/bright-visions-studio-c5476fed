@@ -9,6 +9,7 @@ import ProductsList from "./pages/ProductsList.tsx";
 import ProductDetail from "./pages/ProductDetail.tsx";
 import Legal from "./pages/Legal.tsx";
 import InfoPage from "./pages/InfoPage.tsx";
+import HashScroller from "./components/HashScroller.tsx";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <HashScroller />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/products" element={<ProductsList />} />
