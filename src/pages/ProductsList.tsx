@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -8,11 +8,21 @@ import { getProductImage } from "@/data/productImages";
 
 const ProductsList = () => {
   const { categoryKey } = useParams();
+  const [params] = useSearchParams();
+  const q = (params.get("q") || "").trim().toLowerCase();
   const category = categoryKey ? getCategory(categoryKey) : null;
 
-  const items = category
+  const base = category
     ? category.items.map((p) => ({ ...p, _cat: category }))
     : CATEGORIES.flatMap((c) => c.items.map((p) => ({ ...p, _cat: c })));
+  const items = q
+    ? base.filter((p) =>
+        [p.name, p.formula, p.desc, p.cat, ...(p.tags || []), ...(p.apps || [])]
+          .join(" ")
+          .toLowerCase()
+          .includes(q),
+      )
+    : base;
 
   return (
     <main className="min-h-screen bg-background">
