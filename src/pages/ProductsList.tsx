@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -8,11 +8,21 @@ import { getProductImage } from "@/data/productImages";
 
 const ProductsList = () => {
   const { categoryKey } = useParams();
+  const [params] = useSearchParams();
+  const q = (params.get("q") || "").trim().toLowerCase();
   const category = categoryKey ? getCategory(categoryKey) : null;
 
-  const items = category
+  const base = category
     ? category.items.map((p) => ({ ...p, _cat: category }))
     : CATEGORIES.flatMap((c) => c.items.map((p) => ({ ...p, _cat: c })));
+  const items = q
+    ? base.filter((p) =>
+        [p.name, p.formula, p.desc, p.cat, ...(p.tags || []), ...(p.apps || [])]
+          .join(" ")
+          .toLowerCase()
+          .includes(q),
+      )
+    : base;
 
   return (
     <main className="min-h-screen bg-background">
@@ -23,10 +33,10 @@ const ProductsList = () => {
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <div className="flex flex-col gap-2">
             <span className="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-accent">
-              {category ? category.en : "All Products"}
+              {q ? "Search Results" : category ? category.en : "All Products"}
             </span>
             <h1 className="text-balance text-3xl font-medium tracking-tight text-ink md:text-4xl">
-              {category ? category.kr : "전체 제품"}
+              {q ? `"${q}" 검색결과` : category ? category.kr : "전체 제품"}
             </h1>
             <p className="mt-1 text-sm text-muted-foreground">
               총 {items.length}개 제품 · 파트너사 전 제품 공급 가능 — 목록에 없는 소재도 문의해 주세요.
