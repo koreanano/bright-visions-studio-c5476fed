@@ -9,9 +9,14 @@ const Navigation = () => {
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 bg-background/80 backdrop-blur border-b border-border">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-4 lg:px-12">
-        <Link to="/" className="text-lg font-bold tracking-tight text-ink">
-          NANO<span className="gradient-text-prism">KOREA</span>
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-3 lg:px-12">
+        <Link to="/" className="flex flex-col leading-tight">
+          <span className="text-lg font-bold tracking-tight text-ink">
+            NANO<span className="gradient-text-prism">KOREA</span>
+          </span>
+          <span className="mt-0.5 text-[10px] font-semibold tracking-[0.2em] text-muted-foreground">
+            첨단소재공급기업
+          </span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -48,15 +53,15 @@ const Navigation = () => {
               </div>
             )}
           </div>
-          <a href="/#why" className="text-sm font-medium text-ink/80 hover:text-accent">
+          <Link to="/about" className="text-sm font-medium text-ink/80 hover:text-accent">
             나노코리아
-          </a>
-          <a href="/#service" className="text-sm font-medium text-ink/80 hover:text-accent">
+          </Link>
+          <Link to="/service" className="text-sm font-medium text-ink/80 hover:text-accent">
             서비스
-          </a>
-          <a href="/#faq" className="text-sm font-medium text-ink/80 hover:text-accent">
+          </Link>
+          <Link to="/faq" className="text-sm font-medium text-ink/80 hover:text-accent">
             FAQ
-          </a>
+          </Link>
         </div>
 
         <div className="flex items-center gap-3">
@@ -84,30 +89,22 @@ const Navigation = () => {
             </div>
             <ul className="mb-4 space-y-1">
               <li>
-                <Link
-                  to="/products"
-                  onClick={() => setMobile(false)}
-                  className="block py-1.5 text-sm font-semibold text-ink"
-                >
+                <Link to="/products" onClick={() => setMobile(false)} className="block py-1.5 text-sm font-semibold text-ink">
                   전체 제품 보기
                 </Link>
               </li>
               {CATEGORIES.map((c) => (
                 <li key={c.key}>
-                  <Link
-                    to={`/products/${c.key}`}
-                    onClick={() => setMobile(false)}
-                    className="block py-1.5 text-sm text-ink/80"
-                  >
+                  <Link to={`/products/${c.key}`} onClick={() => setMobile(false)} className="block py-1.5 text-sm text-ink/80">
                     {c.kr}
                   </Link>
                 </li>
               ))}
             </ul>
             <div className="space-y-1 border-t border-border pt-3">
-              <a href="/#why" className="block py-1.5 text-sm">나노코리아</a>
-              <a href="/#service" className="block py-1.5 text-sm">서비스</a>
-              <a href="/#faq" className="block py-1.5 text-sm">FAQ</a>
+              <Link to="/about" onClick={() => setMobile(false)} className="block py-1.5 text-sm">나노코리아</Link>
+              <Link to="/service" onClick={() => setMobile(false)} className="block py-1.5 text-sm">서비스</Link>
+              <Link to="/faq" onClick={() => setMobile(false)} className="block py-1.5 text-sm">FAQ</Link>
               <a href="/#contact" className="mt-2 block bg-ink px-4 py-2 text-center text-xs font-bold uppercase text-white">
                 문의하기
               </a>
