@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import aboutHero from "@/assets/about-hero.jpg";
 import aboutGlobal from "@/assets/about-global.jpg";
-import aboutTrust from "@/assets/about-trust.jpg";
+
 
 type Kind = "about" | "service" | "faq";
 
@@ -117,18 +117,6 @@ const AboutPage = () => (
             있는 기업으로 성장해 나갈 것이며, 고객과 함께 발전하는 신뢰받는 기업이 되기 위해
             최선을 다하겠습니다.
           </p>
-        </div>
-      </div>
-      <div className="mx-auto mt-16 max-w-[1200px] px-6 lg:px-12">
-        <div className="overflow-hidden rounded-lg shadow-lg">
-          <img
-            src={aboutTrust}
-            alt="신뢰를 기반으로 한 비즈니스 파트너십"
-            className="h-full w-full object-cover"
-            loading="lazy"
-            width={1920}
-            height={1080}
-          />
         </div>
       </div>
     </section>
