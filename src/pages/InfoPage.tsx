@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import aboutHero from "@/assets/about-hero.jpg";
 import aboutGlobal from "@/assets/about-global.jpg";
+import aboutTrust from "@/assets/about-trust.jpg";
 
 type Kind = "about" | "service" | "faq";
 
