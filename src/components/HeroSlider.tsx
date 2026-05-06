@@ -27,7 +27,7 @@ const slides: Slide[] = [
     titleEnEnd: "Materials.",
     subtitleKr: "정밀 제어된 첨단 소재로 미래를 설계합니다",
     description:
-      "고순도 용융규석부터 희토류, 맞춤형 소재까지 — 반도체와 항공우주를 위한 정밀 소재를 공급합니다.",
+      "나노코리아는 맞춤형 소재로 프로젝트의 성공을 함께 합니다.",
   },
   {
     id: "02",
@@ -137,9 +137,12 @@ const HeroSlider = () => {
               {current.titleEnEnd}
             </h1>
 
-            <h2 className="mb-8 text-base font-medium tracking-wide text-white/80 md:text-lg">
+            <h2 className="mb-3 text-base font-medium tracking-wide text-white/80 md:text-lg">
               {current.subtitleKr}
             </h2>
+            <p className="mb-8 text-sm font-semibold tracking-[0.25em] text-accent">
+              NANOKOREA
+            </p>
 
             <p className="mb-12 max-w-[55ch] text-pretty text-base leading-relaxed text-white/70 md:text-lg">
               {current.description}
