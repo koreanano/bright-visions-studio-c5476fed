@@ -6,6 +6,17 @@ import { CATEGORIES } from "@/data/products";
 const Navigation = () => {
   const [open, setOpen] = useState(false);
   const [mobile, setMobile] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [q, setQ] = useState("");
+  const navigate = useNavigate();
+
+  const submitSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const term = q.trim();
+    navigate(term ? `/products?q=${encodeURIComponent(term)}` : "/products");
+    setSearchOpen(false);
+    setMobile(false);
+  };
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 bg-background/80 backdrop-blur border-b border-border">
