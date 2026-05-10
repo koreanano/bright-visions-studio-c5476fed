@@ -47,12 +47,64 @@ export type Database = {
         }
         Relationships: []
       }
+      news: {
+        Row: {
+          author: string
+          content: string
+          created_at: string
+          id: string
+          is_private: boolean
+          password: string | null
+          title: string
+        }
+        Insert: {
+          author?: string
+          content: string
+          created_at?: string
+          id?: string
+          is_private?: boolean
+          password?: string | null
+          title: string
+        }
+        Update: {
+          author?: string
+          content?: string
+          created_at?: string
+          id?: string
+          is_private?: boolean
+          password?: string | null
+          title?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_news: {
+        Args: { _id: string; _password?: string }
+        Returns: {
+          author: string
+          content: string
+          created_at: string
+          id: string
+          is_private: boolean
+          title: string
+          unlocked: boolean
+        }[]
+      }
+      list_news: {
+        Args: never
+        Returns: {
+          author: string
+          content: string
+          created_at: string
+          id: string
+          is_private: boolean
+          title: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never
