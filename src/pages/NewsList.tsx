@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Lock, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -59,11 +59,8 @@ const NewsList = () => {
                   className="grid grid-cols-[1fr_auto] items-center gap-4 px-1 py-5 transition-colors hover:bg-muted/40"
                 >
                   <div className="min-w-0">
-                    <div className="flex items-center gap-2">
-                      {r.is_private && <Lock className="h-3.5 w-3.5 text-accent" />}
-                      <h2 className="truncate text-base font-semibold text-ink">{r.title}</h2>
-                    </div>
-                    {!r.is_private && r.content && (
+                    <h2 className="truncate text-base font-semibold text-ink">{r.title}</h2>
+                    {r.content && (
                       <p className="mt-1 line-clamp-1 text-sm text-muted-foreground">{r.content}</p>
                     )}
                   </div>
