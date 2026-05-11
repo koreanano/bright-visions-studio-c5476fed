@@ -97,7 +97,7 @@ const NewsDetail = () => {
       <Navigation />
       <article className="mx-auto max-w-[820px] px-6 pb-20 pt-28 lg:px-12">
         <Link to="/news" className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-accent">
-          <ArrowLeft className="h-3.5 w-3.5" /> 뉴스 목록
+          <ArrowLeft className="h-3.5 w-3.5" /> 게시판 목록
         </Link>
 
         {loading ? (
