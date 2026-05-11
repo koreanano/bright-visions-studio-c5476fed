@@ -71,6 +71,27 @@ const NewsDetail = () => {
     }
   };
 
+  const onDelete = async () => {
+    if (!id) return;
+    setDeleting(true);
+    const { data, error } = await supabase.rpc("delete_news", {
+      _id: id,
+      _password: news?.is_private ? delPw : null,
+    });
+    setDeleting(false);
+    if (error) {
+      toast({ title: "삭제 실패", description: error.message, variant: "destructive" });
+      return;
+    }
+    if (data === true) {
+      toast({ title: "삭제되었습니다." });
+      setDelOpen(false);
+      navigate("/news");
+    } else {
+      toast({ title: "삭제 실패", description: "비밀번호가 일치하지 않습니다.", variant: "destructive" });
+    }
+  };
+
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
