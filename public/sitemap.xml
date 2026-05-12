@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bright-visions-studio.lovable.app/</loc>
+    <loc>https://nanokorea.co.kr/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bright-visions-studio.lovable.app/products</loc>
+    <loc>https://nanokorea.co.kr/products</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bright-visions-studio.lovable.app/about</loc>
+    <loc>https://nanokorea.co.kr/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bright-visions-studio.lovable.app/service</loc>
+    <loc>https://nanokorea.co.kr/service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bright-visions-studio.lovable.app/faq</loc>
+    <loc>https://nanokorea.co.kr/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bright-visions-studio.lovable.app/news</loc>
+    <loc>https://nanokorea.co.kr/news</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bright-visions-studio.lovable.app/terms</loc>
+    <loc>https://nanokorea.co.kr/terms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://bright-visions-studio.lovable.app/privacy</loc>
+    <loc>https://nanokorea.co.kr/privacy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
