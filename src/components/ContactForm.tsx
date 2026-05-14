@@ -3,9 +3,8 @@ import { Building2, Mail } from "lucide-react";
 import { z } from "zod";
 import { toast } from "@/hooks/use-toast";
 import { CATEGORIES } from "@/data/products";
+import { supabase } from "@/integrations/supabase/client";
 import contactBg from "@/assets/contact-bg.jpg";
-
-const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/" + ["cscomm", "naver.com"].join("@");
 
 const schema = z.object({
   company: z.string().trim().min(1, "회사명을 입력해 주세요").max(100),
@@ -31,22 +30,17 @@ const ContactForm = () => {
     }
     setLoading(true);
     try {
-      const res = await fetch(FORMSUBMIT_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          _subject: `[NANOKOREA 문의] ${parsed.data.company} - ${parsed.data.name}`,
-          _template: "table",
-          _captcha: "false",
-          회사명: parsed.data.company,
-          담당자: parsed.data.name,
-          이메일: parsed.data.email,
-          연락처: parsed.data.phone || "-",
-          관심카테고리: parsed.data.category || "-",
-          문의내용: parsed.data.message,
-        }),
+      const { data: resp, error } = await supabase.functions.invoke("send-contact", {
+        body: {
+          company: parsed.data.company,
+          name: parsed.data.name,
+          email: parsed.data.email,
+          phone: parsed.data.phone || "",
+          category: parsed.data.category || "",
+          message: parsed.data.message,
+        },
       });
-      if (!res.ok) throw new Error("send failed");
+      if (error || (resp && (resp as any).error)) throw new Error("send failed");
       setDone(true);
       toast({ title: "문의가 접수되었습니다", description: "담당자가 빠른 시일 내에 연락드리겠습니다." });
       (e.target as HTMLFormElement).reset();
@@ -96,6 +90,23 @@ const ContactForm = () => {
                   <div className="text-sm text-white/70">주식회사 디솔루션</div>
                 </div>
               </div>
+            </div>
+
+            <div className="border-t border-white/10 pt-6">
+              <div className="mb-3 text-xs font-semibold tracking-widest text-white/50">
+                이메일 / EMAIL
+              </div>
+              <a href="mailto:info@nano-korea.co.kr" className="flex items-start gap-4 group">
+                <div className="grid h-11 w-11 shrink-0 place-items-center bg-accent/15 text-accent">
+                  <Mail className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="text-base font-semibold text-white group-hover:text-accent transition-colors">
+                    info@nano-korea.co.kr
+                  </div>
+                  <div className="mt-1 text-sm text-white/70">클릭하시면 바로 메일을 보낼 수 있습니다</div>
+                </div>
+              </a>
             </div>
 
             <div className="border-t border-white/10 pt-6">
