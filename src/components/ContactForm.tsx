@@ -30,22 +30,17 @@ const ContactForm = () => {
     }
     setLoading(true);
     try {
-      const res = await fetch(FORMSUBMIT_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          _subject: `[NANOKOREA 문의] ${parsed.data.company} - ${parsed.data.name}`,
-          _template: "table",
-          _captcha: "false",
-          회사명: parsed.data.company,
-          담당자: parsed.data.name,
-          이메일: parsed.data.email,
-          연락처: parsed.data.phone || "-",
-          관심카테고리: parsed.data.category || "-",
-          문의내용: parsed.data.message,
-        }),
+      const { data: resp, error } = await supabase.functions.invoke("send-contact", {
+        body: {
+          company: parsed.data.company,
+          name: parsed.data.name,
+          email: parsed.data.email,
+          phone: parsed.data.phone || "",
+          category: parsed.data.category || "",
+          message: parsed.data.message,
+        },
       });
-      if (!res.ok) throw new Error("send failed");
+      if (error || (resp && (resp as any).error)) throw new Error("send failed");
       setDone(true);
       toast({ title: "문의가 접수되었습니다", description: "담당자가 빠른 시일 내에 연락드리겠습니다." });
       (e.target as HTMLFormElement).reset();
