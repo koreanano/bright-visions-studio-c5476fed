@@ -94,6 +94,23 @@ const ContactForm = () => {
 
             <div className="border-t border-white/10 pt-6">
               <div className="mb-3 text-xs font-semibold tracking-widest text-white/50">
+                이메일 / EMAIL
+              </div>
+              <a href="mailto:info@nano-korea.co.kr" className="flex items-start gap-4 group">
+                <div className="grid h-11 w-11 shrink-0 place-items-center bg-accent/15 text-accent">
+                  <Mail className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="text-base font-semibold text-white group-hover:text-accent transition-colors">
+                    info@nano-korea.co.kr
+                  </div>
+                  <div className="mt-1 text-sm text-white/70">클릭하시면 바로 메일을 보낼 수 있습니다</div>
+                </div>
+              </a>
+            </div>
+
+            <div className="border-t border-white/10 pt-6">
+              <div className="mb-3 text-xs font-semibold tracking-widest text-white/50">
                 중국 주소 (CHINA)
               </div>
               <div className="flex items-start gap-4">
