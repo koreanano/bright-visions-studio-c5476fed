@@ -80,7 +80,7 @@ const ProductsList = () => {
                           </span>
                         ))}
                       </div>
-                      <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition-all group-hover:translate-x-1 group-hover:text-accent" />
+                      <ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
                     </div>
                   </div>
                   {/* Right: image (half) */}
