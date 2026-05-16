@@ -15,6 +15,7 @@ export type CategoryKey =
   | "carbide"
   | "metal"
   | "nano"
+  | "battery"
   | "others";
 
 export type Category = {
@@ -28,11 +29,10 @@ export type Category = {
 export const CATEGORIES: Category[] = [
   {
     key: "quartz",
-    kr: "용융석영·규석",
-    en: "Fused Silica & Quartz",
-    title: "용융석영·규석 / Fused Silica & Quartz",
+    kr: "용융실리카",
+    en: "Fused Silica",
+    title: "용융실리카 / Fused Silica",
     items: [
-      { name: "천연 규석 원석 / Natural Silica (Quartz Ore)", cat: "규석 원석", formula: "SiO₂", desc: "99~99.9까지 천연 규석을 고객이 원하는 입도로 주문 제작 공급합니다.", tags: ["광산직영", "ISO인증"], apps: ["도자기/세라믹 원료", "도료 및 코팅 충전재", "광전자 기초 원료", "유리 제조"] },
       { name: "용융석영 A등급 / Fused Quartz Grade A", cat: "용융석영", formula: "SiO₂", desc: "SiO₂ >99.9%, 최고 순도 등급. 정밀 광학 부품 및 반도체 소재.", tags: ["SiO₂ 99.9%↑", "광학"], apps: ["초정밀 광학 유리 부품", "반도체 봉지재(EMC) 첨가제", "광통신 케이블 소재", "정밀 도가니"] },
       { name: "용융석영 B등급 / Fused Quartz Grade B", cat: "용융석영", formula: "SiO₂", desc: "SiO₂ >99.5%, 열진동 안정성 우수. 산업 전반에 폭넓게 적용.", tags: ["SiO₂ 99.5%↑", "내화물"], apps: ["고급 내화물", "전기 절연 부품", "정밀 주조 몰드", "내열 세라믹 기판"] },
       { name: "용융석영 C등급 / Fused Quartz Grade C", cat: "용융석영", formula: "SiO₂", desc: "SiO₂ >99%, 비결정형 99%↑. 코팅 및 내화재용 범용 등급.", tags: ["SiO₂ 99%↑", "범용"], apps: ["범용 도료 첨가제", "건축용 내화 캐스터블", "플라스틱/고무 충전재", "주조용 모래"] },
@@ -116,6 +116,13 @@ export const CATEGORIES: Category[] = [
       { name: "나노 실리카 / Nano Silica", cat: "나노소재", formula: "nano-SiO₂", desc: "초미세 실리카 분말. 고분자 강화·도료 첨가·절연 소재 등 광범위하게 활용.", tags: ["실리카", "절연"], apps: ["치과용 레진 필러", "초발수/방오 유리 코팅재", "CMP 슬러리(반도체 연마)", "고기능성 타이어 트레드"] },
       { name: "나노 YSZ / Nano Yttria-Stabilized Zirconia", cat: "나노소재", formula: "nano-YSZ", desc: "나노 스케일 YSZ 분말. 연료전지 전해질·열차폐 코팅·정밀 세라믹 소결용.", tags: ["SOFC", "열차폐"], apps: ["초소형 마이크로 펌프 기어", "수소 센서 전극 소재", "가스터빈 TBC 코팅용액", "치과용 초투명 수복물"] },
     ],
+  },
+  {
+    key: "battery",
+    kr: "이차전지",
+    en: "Secondary Battery",
+    title: "이차전지 / Secondary Battery",
+    items: [],
   },
   {
     key: "others",
