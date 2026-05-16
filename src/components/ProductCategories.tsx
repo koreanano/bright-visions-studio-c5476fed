@@ -18,6 +18,7 @@ const CAT_IMG: Record<CategoryKey, string> = {
   carbide: imgCarbide,
   metal: imgMetal,
   nano: imgNano,
+  battery: imgOthers,
   others: imgOthers,
 };
 
