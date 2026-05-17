@@ -30,19 +30,23 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 bg-background/80 backdrop-blur border-b border-border">
+    <nav className={`fixed left-0 right-0 top-0 z-50 transition-colors duration-300 ${
+      transparent
+        ? "bg-transparent border-b border-transparent"
+        : "bg-background/80 backdrop-blur border-b border-border"
+    }`}>
       <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-3 lg:px-12">
         <Link to="/" className="flex flex-col leading-tight">
-          <span className="text-lg font-bold tracking-tight text-ink">
+          <span className={`text-lg font-bold tracking-tight ${transparent ? "text-white" : "text-ink"}`}>
             NANO<span className="gradient-text-prism">KOREA</span>
           </span>
-          <span className="mt-0.5 text-[10px] font-semibold tracking-[0.2em] text-muted-foreground">
+          <span className={`mt-0.5 text-[10px] font-semibold tracking-[0.2em] ${transparent ? "text-white/70" : "text-muted-foreground"}`}>
             첨단소재공급기업
           </span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
-          <Link to="/about" className="text-sm font-medium text-ink/80 hover:text-accent">
+          <Link to="/about" className={`text-sm font-medium hover:text-accent ${transparent ? "text-white/90" : "text-ink/80"}`}>
             나노코리아
           </Link>
           <div
@@ -50,7 +54,7 @@ const Navigation = () => {
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
           >
-            <button className="flex items-center gap-1 text-sm font-medium text-ink/80 hover:text-accent">
+            <button className={`flex items-center gap-1 text-sm font-medium hover:text-accent ${transparent ? "text-white/90" : "text-ink/80"}`}>
               제품 카테고리 <ChevronDown className="h-3.5 w-3.5" />
             </button>
             {open && (
@@ -78,19 +82,23 @@ const Navigation = () => {
               </div>
             )}
           </div>
-          <Link to="/news" className="text-sm font-medium text-ink/80 hover:text-accent">
+          <Link to="/news" className={`text-sm font-medium hover:text-accent ${transparent ? "text-white/90" : "text-ink/80"}`}>
             게시판
           </Link>
-          <Link to="/faq" className="text-sm font-medium text-ink/80 hover:text-accent">
+          <Link to="/faq" className={`text-sm font-medium hover:text-accent ${transparent ? "text-white/90" : "text-ink/80"}`}>
             FAQ
           </Link>
-          <form onSubmit={submitSearch} className="flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1.5 focus-within:border-accent">
-            <Search className="h-3.5 w-3.5 text-muted-foreground" />
+          <form onSubmit={submitSearch} className={`flex items-center gap-1.5 rounded-full border px-3 py-1.5 focus-within:border-accent ${
+            transparent ? "border-white/30 bg-white/10 backdrop-blur" : "border-border bg-background"
+          }`}>
+            <Search className={`h-3.5 w-3.5 ${transparent ? "text-white/70" : "text-muted-foreground"}`} />
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
               placeholder="제품 검색"
-              className="w-32 bg-transparent text-xs text-ink placeholder:text-muted-foreground focus:outline-none lg:w-40"
+              className={`w-32 bg-transparent text-xs focus:outline-none lg:w-40 ${
+                transparent ? "text-white placeholder:text-white/60" : "text-ink placeholder:text-muted-foreground"
+              }`}
             />
           </form>
         </div>
