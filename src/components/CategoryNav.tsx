@@ -93,7 +93,7 @@ const CategoryNav = () => {
             to="/products"
             className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
               !categoryKey
-                ? "border-accent bg-accent/10 text-accent"
+                ? "border-accent bg-accent/10 text-ink"
                 : "border-border text-ink hover:border-accent hover:text-accent"
             }`}
           >
@@ -107,7 +107,7 @@ const CategoryNav = () => {
                 to={`/products/${c.key}`}
                 className={`shrink-0 rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
                   active
-                    ? "border-accent bg-accent/10 text-accent"
+                    ? "border-accent bg-accent/10 text-ink"
                     : "border-border text-ink hover:border-accent hover:text-accent"
                 }`}
               >

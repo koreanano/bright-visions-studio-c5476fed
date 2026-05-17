@@ -110,7 +110,7 @@ const HeroSlider = () => {
           <div key={current.id} className="max-w-3xl animate-slide-up">
             <div className="mb-8 flex items-center gap-4">
               <div className="h-px w-12 bg-accent" />
-              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-ink">
                 {current.eyebrow}
               </span>
             </div>

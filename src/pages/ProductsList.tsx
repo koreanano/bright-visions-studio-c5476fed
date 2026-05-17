@@ -32,7 +32,7 @@ const ProductsList = () => {
       <section className="pt-10 pb-8">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
           <div className="flex flex-col gap-2">
-            <span className="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+            <span className="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-ink">
               {q ? "Search Results" : category ? category.en : "All Products"}
             </span>
             <h1 className="text-balance text-3xl font-medium tracking-tight text-ink md:text-4xl">
@@ -74,7 +74,7 @@ const ProductsList = () => {
                     )}
                   </div>
                   <div className="flex flex-1 flex-col p-4">
-                    <span className="mb-1.5 font-mono text-[10px] font-semibold uppercase tracking-widest text-accent">
+                    <span className="mb-1.5 font-mono text-[10px] font-semibold uppercase tracking-widest text-ink">
                       {cat.kr}
                     </span>
                     <h3 className="mb-1 text-sm font-semibold leading-snug text-ink">
@@ -89,7 +89,7 @@ const ProductsList = () => {
                         {p.tags.slice(0, 2).map((t) => (
                           <span
                             key={t}
-                            className="bg-muted px-1.5 py-0.5 text-[10px] font-medium text-accent"
+                            className="bg-muted px-1.5 py-0.5 text-[10px] font-medium text-ink"
                           >
                             {t}
                           </span>

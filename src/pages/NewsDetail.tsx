@@ -157,7 +157,7 @@ const NewsDetail = () => {
                     href={news.source_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-2 inline-flex items-center gap-1.5 break-all text-sm text-accent underline-offset-4 hover:underline"
+                    className="mt-2 inline-flex items-center gap-1.5 break-all text-sm text-ink underline-offset-4 hover:underline"
                   >
                     {news.source_url}
                     <ExternalLink className="h-3.5 w-3.5 shrink-0" />

@@ -29,7 +29,7 @@ const ProductCategories = () => {
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="mb-16 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <div className="max-w-2xl">
-            <h2 className="text-balance text-4xl font-medium leading-[1.1] tracking-tight text-accent md:text-5xl lg:text-6xl">
+            <h2 className="text-balance text-4xl font-medium leading-[1.1] tracking-tight text-ink md:text-5xl lg:text-6xl">
               Product Categories
             </h2>
           </div>

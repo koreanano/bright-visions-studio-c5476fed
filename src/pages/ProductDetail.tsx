@@ -17,7 +17,7 @@ const ProductDetail = () => {
         <Navigation />
         <section className="pt-32 pb-32 text-center">
           <p className="text-muted-foreground">제품을 찾을 수 없습니다.</p>
-          <Link to="/products" className="mt-4 inline-block text-accent">전체 제품 보기</Link>
+          <Link to="/products" className="mt-4 inline-block text-ink">전체 제품 보기</Link>
         </section>
         <Footer />
       </main>
@@ -39,7 +39,7 @@ const ProductDetail = () => {
 
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-start">
             <div>
-              <div className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+              <div className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.25em] text-ink">
                 {category.en} · {product.cat}
               </div>
               <h1 className="text-balance text-4xl font-medium tracking-tight text-ink md:text-5xl">
@@ -62,7 +62,7 @@ const ProductDetail = () => {
 
           <div className="mt-8 flex flex-wrap gap-2">
             {product.tags.map((t) => (
-              <span key={t} className="bg-muted px-3 py-1.5 text-xs font-medium text-accent">
+              <span key={t} className="bg-muted px-3 py-1.5 text-xs font-medium text-ink">
                 {t}
               </span>
             ))}
@@ -75,7 +75,7 @@ const ProductDetail = () => {
             <ul className="grid grid-cols-1 gap-px bg-border sm:grid-cols-2">
               {product.apps.map((a) => (
                 <li key={a} className="flex items-start gap-3 bg-background p-5 text-sm text-ink/80">
-                  <span className="mt-0.5 text-accent">→</span>
+                  <span className="mt-0.5 text-ink">→</span>
                   <span>{a}</span>
                 </li>
               ))}
@@ -84,7 +84,7 @@ const ProductDetail = () => {
 
           <div className="mt-14 flex flex-col items-start justify-between gap-6 border border-border bg-muted/40 p-8 md:flex-row md:items-center">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-widest text-accent">Inquiry</div>
+              <div className="text-xs font-semibold uppercase tracking-widest text-ink">Inquiry</div>
               <h3 className="mt-1 text-xl font-medium text-ink">이 제품에 대한 견적·샘플 문의</h3>
             </div>
             <Link
