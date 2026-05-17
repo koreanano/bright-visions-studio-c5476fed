@@ -61,6 +61,11 @@ const ContactForm = () => {
         backgroundPosition: "center",
       }}
     >
+      <div className="mx-auto mb-10 max-w-[1280px] px-6 lg:px-12">
+        <div className="text-center text-sm font-semibold tracking-[0.2em] text-white/80">
+          첨단소재 공급기업 · 나노코리아
+        </div>
+      </div>
       <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-10 px-6 lg:grid-cols-2 lg:gap-16 lg:px-12">
         {/* LEFT — info */}
         <div className="text-white">
