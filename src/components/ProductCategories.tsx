@@ -31,10 +31,10 @@ const ProductCategories = () => {
           <div className="max-w-2xl">
             <div className="mb-6 flex items-center gap-4">
               <div className="h-px w-10 bg-accent" />
+              <span className="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+                Product Categories
+              </span>
             </div>
-            <h2 className="text-balance text-4xl font-medium leading-[1.1] tracking-tight text-ink md:text-5xl lg:text-6xl">
-              Product Categories
-            </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-muted-foreground">
             카테고리를 선택하면 해당 제품 목록을 확인할 수 있습니다. 글로벌 첨단소재
