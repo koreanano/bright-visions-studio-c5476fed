@@ -45,7 +45,7 @@ Deno.serve(async (req) => {
 
     // 2) Send notification email via transactional template
     try {
-      const invokeKey = Deno.env.get("SUPABASE_ANON_KEY") || Deno.env.get("SUPABASE_PUBLISHABLE_KEY")!;
+      const invokeKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
       const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
       const resp = await fetch(`${supabaseUrl}/functions/v1/send-transactional-email`, {
         method: "POST",
