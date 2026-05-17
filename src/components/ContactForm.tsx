@@ -64,7 +64,7 @@ const ContactForm = () => {
       <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-10 px-6 lg:grid-cols-2 lg:gap-16 lg:px-12">
         {/* LEFT — info */}
         <div className="text-white">
-          <div className="mb-4 font-mono text-sm font-semibold tracking-wider text-accent">
+          <div className="mb-4 font-mono text-sm font-semibold tracking-wider text-ink">
             문의하기 / CONTACT
           </div>
           <h2 className="text-balance text-4xl font-semibold leading-[1.05] tracking-tight md:text-5xl lg:text-6xl">
@@ -81,7 +81,7 @@ const ContactForm = () => {
                 주소 및 연락처
               </div>
               <div className="flex items-start gap-4">
-                <div className="grid h-11 w-11 shrink-0 place-items-center bg-accent/15 text-accent">
+                <div className="grid h-11 w-11 shrink-0 place-items-center bg-accent/15 text-ink">
                   <Building2 className="h-5 w-5" />
                 </div>
                 <div>
@@ -97,7 +97,7 @@ const ContactForm = () => {
                 이메일 / EMAIL
               </div>
               <a href="mailto:info@nano-korea.co.kr" className="flex items-start gap-4 group">
-                <div className="grid h-11 w-11 shrink-0 place-items-center bg-accent/15 text-accent">
+                <div className="grid h-11 w-11 shrink-0 place-items-center bg-accent/15 text-ink">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
@@ -114,7 +114,7 @@ const ContactForm = () => {
                 중국 주소 (CHINA)
               </div>
               <div className="flex items-start gap-4">
-                <div className="grid h-11 w-11 shrink-0 place-items-center bg-accent/15 font-mono text-xs font-bold text-accent">
+                <div className="grid h-11 w-11 shrink-0 place-items-center bg-accent/15 font-mono text-xs font-bold text-ink">
                   CN
                 </div>
                 <div>
@@ -171,7 +171,7 @@ const ContactForm = () => {
                 {loading ? "전송 중..." : "문의 보내기"}
               </button>
               {done && (
-                <p className="mt-4 text-center text-sm text-accent">
+                <p className="mt-4 text-center text-sm text-ink">
                   ✅ 문의가 접수되었습니다! 담당자가 빠른 시일 내에 연락드리겠습니다.
                 </p>
               )}
