@@ -1,1 +1,4 @@
 project_id = "cxunablwrzusvrfpegia"
+
+[functions.process-email-queue]
+verify_jwt = true
