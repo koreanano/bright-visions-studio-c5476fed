@@ -184,6 +184,11 @@ const ContactForm = () => {
           </form>
         </div>
       </div>
+      <div className="mx-auto mt-12 max-w-[1280px] px-6 lg:px-12">
+        <div className="border-t border-white/10 pt-6 text-center text-sm font-semibold tracking-[0.2em] text-white/80">
+          첨단소재 공급기업 · 나노코리아
+        </div>
+      </div>
     </section>
   );
 };
