@@ -378,7 +378,7 @@ const PROD_Nano_PolishingPowder: Product = {
   desc: "고정밀 폴리싱용 나노 세라믹 파우더 시리즈. CeO₂(유리·실리콘 CMP), α-Al₂O₃(하드디스크·금속), ZrO₂(광학), 콜로이달 실리카(웨이퍼 최종 CMP), 나노 다이아몬드(초경) 등 용도별 입도(30~500 nm) 최적 제품을 공급합니다.",
   tags: ["CMP", "정밀 폴리싱", "30~500 nm"],
   apps: ["반도체 웨이퍼 CMP", "LCD·OLED 유리 폴리싱", "보석·렌즈 광학 폴리싱", "하드디스크 표면 폴리싱", "정밀 금형·금속 미세연마"],
-  sizingTable: undefined,
+  
   details: {
     sizingTable: {
       title: "재료별 권장 입도 / 용도",
