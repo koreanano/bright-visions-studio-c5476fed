@@ -39,9 +39,13 @@ const ProductCategories = () => {
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="mb-16 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <div className="max-w-2xl md:pl-16 lg:pl-24">
-            <h2 className="text-balance text-2xl font-medium leading-[1.1] tracking-tight text-ink md:text-3xl lg:text-4xl">
+            <Link
+              to="/products"
+              className="group inline-flex items-center gap-3 border-b-2 border-accent pb-1 text-balance text-2xl font-medium leading-[1.1] tracking-tight text-ink transition-colors hover:text-accent md:text-3xl lg:text-4xl"
+            >
               Product Categories
-            </h2>
+              <ArrowUpRight className="h-6 w-6 text-accent transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </Link>
           </div>
           <p className="max-w-md text-base leading-relaxed text-muted-foreground md:-ml-8 lg:-ml-16">
             카테고리를 선택하면 해당 제품 목록을 확인할 수 있습니다. 글로벌 첨단소재

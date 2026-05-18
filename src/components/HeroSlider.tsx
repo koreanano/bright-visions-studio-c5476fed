@@ -1,8 +1,10 @@
 import { useEffect, useState, useCallback } from "react";
 import { ChevronRight, Play } from "lucide-react";
-import hero1 from "@/assets/hero-1-cleanroom.jpg";
-import hero2 from "@/assets/hero-2-particles.jpg";
-import heroPowder from "@/assets/hero-3-powder.jpg";
+import heroMn from "@/assets/hero-mn.jpg";
+import heroFluoride from "@/assets/hero-fluoride.jpg";
+import heroRareearth from "@/assets/hero-rareearth.jpg";
+import heroCorundum from "@/assets/hero-corundum.jpg";
+import heroNitride from "@/assets/hero-nitride.jpg";
 
 type Slide = {
   id: string;
@@ -20,38 +22,62 @@ const slides: Slide[] = [
   {
     id: "01",
     type: "image",
-    src: hero1,
-    eyebrow: "차세대 초정밀 소재 솔루션",
-    titleEn: "Empowering Industries with",
-    highlight: "Superior",
-    titleEnEnd: "Materials.",
-    subtitleKr: "정밀 제어된 첨단 소재로 미래를 설계합니다",
+    src: heroMn,
+    eyebrow: "Electrolytic Manganese · 이차전지 핵심소재",
+    titleEn: "Powering the Next",
+    highlight: "Battery",
+    titleEnEnd: "Generation.",
+    subtitleKr: "전해 망간 플레이크 · 고순도 이차전지 원료",
     description:
-      "나노코리아는 맞춤형 소재로 프로젝트의 성공을 함께 합니다.",
+      "나노코리아는 NCM·NCA 양극재용 고순도 전해 망간 플레이크를 안정적으로 공급합니다.",
   },
   {
     id: "02",
     type: "image",
-    src: hero2,
-    eyebrow: "Controlled Materials · 1–100nm",
-    titleEn: "Controlled Materials,",
-    highlight: "Reliable",
-    titleEnEnd: "Performance.",
-    subtitleKr: "검증된 품질, 안정적인 성능",
+    src: heroFluoride,
+    eyebrow: "Fluorides · CaF₂ · LiF",
+    titleEn: "High-Purity",
+    highlight: "Fluoride",
+    titleEnEnd: "Compounds.",
+    subtitleKr: "형석 · 불화칼슘 · 불화리튬",
     description:
-      "나노코리아는 글로벌 첨단소재 제조사의 검증된 소재와 첨단 화합물을 국내 산업에 공급합니다.",
+      "광학·제련·이차전지 전해질용 고순도 불화물 화합물을 글로벌 제조사와 협력하여 공급합니다.",
   },
   {
     id: "03",
     type: "image",
-    src: heroPowder,
-    eyebrow: "B2B · 기업 전문 공급",
-    titleEn: "Built for the Industries that",
-    highlight: "Build",
-    titleEnEnd: "Tomorrow.",
-    subtitleKr: "내일을 만드는 산업과 함께",
+    src: heroRareearth,
+    eyebrow: "Rare Earth Elements · 17종 전 라인업",
+    titleEn: "Critical",
+    highlight: "Rare Earth",
+    titleEnEnd: "Materials.",
+    subtitleKr: "산화물 · 금속 · 합금 · 영구자석 분말",
     description:
-      "나노코리아는 산업 표준에 충족하는 B2B 전문 공급망을 운영합니다.",
+      "Y·Ce·La·Nd·Pr·Sm·Eu·Gd·Tb·Dy 등 희토류 17종 전 라인업을 단일 창구로 공급합니다.",
+  },
+  {
+    id: "04",
+    type: "image",
+    src: heroCorundum,
+    eyebrow: "Corundum · Al₂O₃",
+    titleEn: "Engineered",
+    highlight: "Corundum",
+    titleEnEnd: "Abrasives.",
+    subtitleKr: "코런덤 · 용융 알루미나 · 연마재",
+    description:
+      "WFA·BFA 용융 알루미나와 코런덤 원료를 입도별로 정밀 분급하여 공급합니다.",
+  },
+  {
+    id: "05",
+    type: "image",
+    src: heroNitride,
+    eyebrow: "Advanced Nitrides · AlN · Si₃N₄ · BN",
+    titleEn: "Next-Gen",
+    highlight: "Nitride",
+    titleEnEnd: "Ceramics.",
+    subtitleKr: "질화알루미늄 · 질화규소 · 질화붕소",
+    description:
+      "방열기판·절연·반도체 공정용 첨단 질화물 세라믹 분말을 고순도 그레이드로 제공합니다.",
   },
 ];
 
