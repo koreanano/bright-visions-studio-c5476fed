@@ -104,10 +104,6 @@ export const PRODUCT_IMAGES: Record<string, string> = {
   "4N 나노 알루미나 / 4N Nano Alumina": nanoAlumina,
   "5N 고순도 나노 알루미나 / 5N High Purity Nano Alumina": nanoAlumina,
   "나노 알루미나 분산액 / Nano Alumina Dispersion": nanoAlumina,
-  "나노 지르코니아 / Nano Zirconia": nanoZirconia,
-  "나노 지르코니아 분산액 / Nano Zirconia Dispersion": nanoZirconia,
-  "나노 실리카 / Nano Silica": nanoSilica,
-  "나노 산화아연 / Nano Zinc Oxide": nanoZno,
 };
 
 export const getProductImage = (name: string) => PRODUCT_IMAGES[name];
