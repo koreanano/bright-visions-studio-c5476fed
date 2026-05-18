@@ -1,3 +1,20 @@
+export type ProductFeature = { title: string; points: string[] };
+export type ProductAppSection = {
+  title: string;
+  rows: { use: string; role: string }[];
+};
+export type ProductSizingTable = {
+  title: string;
+  intro?: string;
+  headers: [string, string, string];
+  rows: [string, string, string][];
+};
+export type ProductDetails = {
+  features?: ProductFeature[];
+  appSections?: ProductAppSection[];
+  sizingTable?: ProductSizingTable;
+};
+
 export type Product = {
   name: string;
   cat: string;
@@ -5,6 +22,7 @@ export type Product = {
   desc: string;
   tags: string[];
   apps: string[];
+  details?: ProductDetails;
 };
 
 export type CategoryKey =
@@ -33,10 +51,117 @@ export const CATEGORIES: Category[] = [
     en: "Fused Silica",
     title: "용융실리카 / Fused Silica",
     items: [
-      { name: "용융석영 A등급 / Fused Quartz Grade A", cat: "용융석영", formula: "SiO₂", desc: "SiO₂ >99.9%, 최고 순도 등급. 정밀 광학 부품 및 반도체 소재.", tags: ["SiO₂ 99.9%↑", "광학"], apps: ["초정밀 광학 유리 부품", "반도체 봉지재(EMC) 첨가제", "광통신 케이블 소재", "정밀 도가니"] },
-      { name: "용융석영 B등급 / Fused Quartz Grade B", cat: "용융석영", formula: "SiO₂", desc: "SiO₂ >99.5%, 열진동 안정성 우수. 산업 전반에 폭넓게 적용.", tags: ["SiO₂ 99.5%↑", "내화물"], apps: ["고급 내화물", "전기 절연 부품", "정밀 주조 몰드", "내열 세라믹 기판"] },
-      { name: "용융석영 C등급 / Fused Quartz Grade C", cat: "용융석영", formula: "SiO₂", desc: "SiO₂ >99%, 비결정형 99%↑. 코팅 및 내화재용 범용 등급.", tags: ["SiO₂ 99%↑", "범용"], apps: ["범용 도료 첨가제", "건축용 내화 캐스터블", "플라스틱/고무 충전재", "주조용 모래"] },
-      { name: "용융 실리카 분말 / Fused Silica Powder", cat: "실리카 분말", formula: "SiO₂", desc: "75μm~1μm 초미세 분말. 낮은 유전손실·우수한 전기절연성.", tags: ["초미세", "반도체"], apps: ["PCB 동박적층판(CCL)", "고급 에폭시 수지 첨가제", "반도체 패키징 필러", "특수 코팅재"] },
+      {
+        name: "용융석영 A등급 / Fused Quartz Grade A",
+        cat: "용융석영",
+        formula: "SiO₂",
+        desc: "SiO₂ >99.9%, 최고 순도 등급. 정밀 광학 부품 및 반도체 소재.",
+        tags: ["SiO₂ 99.9%↑", "광학"],
+        apps: ["초정밀 광학 유리 부품", "반도체 봉지재(EMC) 첨가제", "광통신 케이블 소재", "정밀 도가니"],
+        details: {
+          features: [
+            { title: "초고순도 – 반도체 공정에 안전", points: ["주요 금속 불순물(Al, Fe, Na, K, Ca, Mg) 각각 0.01% 미만", "웨이퍼 오염 위험을 최소화하여 고집적 반도체 공정 수율 향상"] },
+            { title: "초저열팽창 – 극한 온도 환경에 강함", points: ["열팽창계수 0.6 ×10⁻⁶/°C 미만 (일반 유리 대비 15배 이상 낮음)", "급격한 가열/냉각에도 균열 및 광학 왜곡 거의 없음"] },
+            { title: "완전 무정형 – 균일한 광학 성능", points: ["100% 무정형상(Amorphous)으로 빛의 산란 없음", "UV부터 IR까지 넓은 파장대에서 높은 투과율"] },
+            { title: "전기적·화학적 안정성", points: ["초고절연(EC < 3 µs/cm), 초저염소(Cl < 3 ppm), 중성(pH 6.5)", "부식 위험이 낮아 장비 수명 연장 및 공정 안정성 확보"] },
+            { title: "높은 내마모성", points: ["모스경도 7 (일반 유리 5.5 대비 높음)", "표면 스크래치에 강하고 정밀 가공 시 날카로운 모서리 구현 가능"] },
+          ],
+        },
+      },
+      {
+        name: "용융석영 B등급 / Fused Quartz Grade B",
+        cat: "용융석영",
+        formula: "SiO₂",
+        desc: "SiO₂ >99.5%, 열진동 안정성 우수. 산업 전반에 폭넓게 적용.",
+        tags: ["SiO₂ 99.5%↑", "내화물"],
+        apps: ["고급 내화물", "전기 절연 부품", "정밀 주조 몰드", "내열 세라믹 기판"],
+        details: {
+          features: [
+            { title: "고순도 정제 – 안정적인 품질", points: ["SiO₂ 순도 99.5% 이상", "A등급(99.9%) 대비 경제적인 가격으로 일반 산업에 적합"] },
+            { title: "저철분 관리 – 착색 및 오염 최소화", points: ["Fe(철) 함량 0.02% 미만", "내화재·코팅·세라믹 원료 사용 시 철 성분으로 인한 변색이나 오염 방지"] },
+            { title: "우수한 내열충격성", points: ["열팽창계수 0.8 ×10⁻⁶/°C 미만", "급격한 온도 변화에도 균열 발생이 적어 고온 공정·내화재·주조용 몰드에 적합"] },
+            { title: "98% 이상 무정형상", points: ["결정질 석영 대비 열 충격에 강하고 가공성 우수", "균일한 열 팽창 특성 제공"] },
+            { title: "화학적 안정성", points: ["알칼리 금속(Na, K) 함량 각각 0.01% 미만", "고온 환경에서 화학적 반응성을 낮춰 내구성 확보"] },
+          ],
+        },
+      },
+      {
+        name: "용융석영 C등급 / Fused Quartz Grade C",
+        cat: "용융석영",
+        formula: "SiO₂",
+        desc: "SiO₂ >99%, 비결정형 99%↑. 코팅 및 내화재용 범용 등급.",
+        tags: ["SiO₂ 99%↑", "범용"],
+        apps: ["범용 도료 첨가제", "건축용 내화 캐스터블", "플라스틱/고무 충전재", "주조용 모래"],
+        details: {
+          features: [
+            { title: "경제적인 가격 – 대량 사용에 적합", points: ["SiO₂ 순도 99% 이상으로 산업용 기준 충분", "A/B등급 대비 원가 절감으로 대량 수요에 최적화"] },
+            { title: "안정적인 내열충격성", points: ["열팽창계수 1.2 ×10⁻⁶/°C 미만", "급격한 온도 변화에도 균열 발생 억제", "고온 공정(최대 1,000℃)에서 안정적 사용 가능"] },
+            { title: "우수한 내마모성", points: ["모스경도 7 (일반 광물 대비 높은 경도)", "분말 형태로 사용 시 내마모성 충전재 역할"] },
+            { title: "95% 이상 무정형상", points: ["결정질 석영 대비 열 충격 저항성 우수", "균일한 열팽창 특성 제공"] },
+            { title: "건조 관리로 장기 보관 가능", points: ["수분 함량 0.1% 미만 유지", "흡습 방지 포장으로 품질 일관성 확보"] },
+          ],
+        },
+      },
+      {
+        name: "용융 실리카 분말 / Fused Silica Powder",
+        cat: "실리카 분말",
+        formula: "SiO₂",
+        desc: "75μm~1μm 초미세 분말. 낮은 유전손실·우수한 전기절연성.",
+        tags: ["초미세", "반도체"],
+        apps: ["PCB 동박적층판(CCL)", "고급 에폭시 수지 첨가제", "반도체 패키징 필러", "특수 코팅재"],
+        details: {
+          appSections: [
+            { title: "내화재 (Refractories)", rows: [
+              { use: "고온로 내화 벽돌", role: "고온 내구성, 열충격 저항성 향상" },
+              { use: "캐스터블 (Castable)", role: "결합재와 혼합하여 고온 내화물 제작" },
+              { use: "로의 내화 라이닝", role: "열팽창 최소화, 균열 방지" },
+              { use: "단열재", role: "낮은 열전도율로 단열 성능 제공" },
+            ]},
+            { title: "정밀 주조 (Investment Casting)", rows: [
+              { use: "셸 몰드 (Shell Mold)", role: "내열성, 치수 안정성 확보" },
+              { use: "세라믹 코어", role: "복잡한 내부 형상 제작 가능" },
+              { use: "주조용 코팅제", role: "금형과 용융 금속 사이 이형 및 단열" },
+            ]},
+            { title: "산업용 코팅 (Industrial Coatings)", rows: [
+              { use: "내열 페인트", role: "고온에서도 벗겨지지 않는 코팅층 형성" },
+              { use: "방청 코팅", role: "수분 및 화학물질 차단" },
+              { use: "세라믹 코팅", role: "내마모성, 내화학성 부여" },
+            ]},
+            { title: "전자·반도체 소재 (Electronics & Semiconductors)", rows: [
+              { use: "반도체 봉지재 (EMC)", role: "열팽창 계수 매칭, 절연성 향상" },
+              { use: "회로 기판 충전재", role: "저유전율, 저열팽창 특성 제공" },
+              { use: "방열 소재", role: "높은 열전도율로 방열 성능 개선" },
+            ]},
+            { title: "고분자 복합재 (Polymer Composites)", rows: [
+              { use: "엔지니어링 플라스틱", role: "내열성, 내마모성, 치수 안정성 향상" },
+              { use: "접착제 / 실란트", role: "충전재로 점도 조절, 열팽창 저감" },
+              { use: "방열 시트", role: "열전도성 필러로 사용" },
+            ]},
+            { title: "연마재 및 표면 처리 (Abrasives & Surface Treatment)", rows: [
+              { use: "샌드블라스팅", role: "금속 표면의 녹, 페인트 제거" },
+              { use: "연마제", role: "유리, 금속, 세라믹 표면 연마" },
+              { use: "워터젯 절단용 입자", role: "절단 효율 향상" },
+            ]},
+            { title: "건축 및 토목 (Construction & Civil Engineering)", rows: [
+              { use: "고강도 콘크리트", role: "내화성, 내구성 향상" },
+              { use: "내열 모르타르", role: "고온 환경용 접착 및 보수" },
+              { use: "그라우트재", role: "균열 방지, 수축 저감" },
+            ]},
+          ],
+          sizingTable: {
+            title: "입자 크기별 용도",
+            intro: "용융실리카 분말은 입자 크기(메시, Mesh)에 따라 사용처가 완전히 달라집니다.",
+            headers: ["입도 (Mesh)", "평균 입자 크기", "대표 용도"],
+            rows: [
+              ["#30 ~ #100", "150 ~ 500µm", "샌드블라스팅, 필터 매체, 중간 충전재"],
+              ["#100 ~ #200", "75 ~ 150µm", "주조 몰드, 내화 캐스터블, 코팅용 골재"],
+              ["#200 ~ #325", "45 ~ 75µm", "접착제, 실란트, 고분자 충전재"],
+              ["#325 ~ #400", "37 ~ 45µm", "세라믹 원료, 정밀 충전재, 봉지재"],
+              ["#400 미만 (미분말)", "< 37µm", "반도체 봉지재, 방열 소재, 고성능 코팅"],
+            ],
+          },
+        },
+      },
       { name: "용융석영사 A·B·C / Fused Quartz Sand A·B·C", cat: "용융석영사", formula: "SiO₂", desc: "60~0.075mm 규격 과립·석영사. 정밀주조 및 내화 캐스터블.", tags: ["석영사", "주조"], apps: ["석영 도가니 제조", "정밀 주조용 쉘 몰드", "내산성 콘크리트 첨가제", "고온로 단열재"] },
     ],
   },
