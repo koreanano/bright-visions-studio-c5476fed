@@ -530,7 +530,35 @@ export const CATEGORIES: Category[] = [
     ],
   },
 
+  // 2. 나노소재 (Nano Materials)
+  {
+    key: "nano",
+    kr: "나노소재",
+    en: "Nano Materials",
+    title: "나노소재 / Nano Materials",
+    items: [
+      PROD_Nano_Al2O3_4N,
+      PROD_Nano_Al2O3_5N,
+      PROD_Nano_Al2O3_Disp,
+      PROD_Nano_TiO2,
+      PROD_Nano_TiO2_Disp,
+      PROD_Nano_ZrO2,
+      PROD_Nano_ZrO2_Disp,
+      PROD_Nano_SiO2,
+      PROD_Nano_ZnO,
+      PROD_Nano_MgO,
+      PROD_Nano_Ag,
+      PROD_Nano_ATO,
+      PROD_Nano_RareEarth,
+      PROD_Nano_IronOxide,
+      PROD_Nano_PolishingPowder,
+      PROD_Nano_PolishingLiquid,
+    ],
+  },
+
   // 이차전지는 아래(마지막)로 이동되었습니다.
+
+
 
 
   // 3. 탄산염
