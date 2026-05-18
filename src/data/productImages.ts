@@ -100,7 +100,14 @@ export const PRODUCT_IMAGES: Record<string, string> = {
   "불화리튬 / Lithium Fluoride": fluorite,
   "전해 망간 금속 플레이크 / Electrolytic Manganese Metal Flakes": manganese,
   "흑연 분말 (음극재용) / Graphite Powder (Anode Grade)": graphite,
-
+  // 나노소재 카테고리 매핑
+  "4N 나노 알루미나 / 4N Nano Alumina": nanoAlumina,
+  "5N 고순도 나노 알루미나 / 5N High Purity Nano Alumina": nanoAlumina,
+  "나노 알루미나 분산액 / Nano Alumina Dispersion": nanoAlumina,
+  "나노 지르코니아 / Nano Zirconia": nanoZirconia,
+  "나노 지르코니아 분산액 / Nano Zirconia Dispersion": nanoZirconia,
+  "나노 실리카 / Nano Silica": nanoSilica,
+  "나노 산화아연 / Nano Zinc Oxide": nanoZno,
 };
 
 export const getProductImage = (name: string) => PRODUCT_IMAGES[name];
