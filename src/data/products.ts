@@ -28,6 +28,7 @@ export type Product = {
 
 export type CategoryKey =
   | "quartz"
+  | "nano"
   | "battery"
   | "carbonates"
   | "fluorides"
