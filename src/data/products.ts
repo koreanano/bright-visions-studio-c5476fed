@@ -1,3 +1,20 @@
+export type ProductFeature = { title: string; points: string[] };
+export type ProductAppSection = {
+  title: string;
+  rows: { use: string; role: string }[];
+};
+export type ProductSizingTable = {
+  title: string;
+  intro?: string;
+  headers: [string, string, string];
+  rows: [string, string, string][];
+};
+export type ProductDetails = {
+  features?: ProductFeature[];
+  appSections?: ProductAppSection[];
+  sizingTable?: ProductSizingTable;
+};
+
 export type Product = {
   name: string;
   cat: string;
@@ -5,6 +22,7 @@ export type Product = {
   desc: string;
   tags: string[];
   apps: string[];
+  details?: ProductDetails;
 };
 
 export type CategoryKey =
