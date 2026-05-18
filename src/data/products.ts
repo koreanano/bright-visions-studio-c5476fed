@@ -155,7 +155,257 @@ const PROD_Mn: Product = {
   },
 };
 
+// ──────────────── 나노소재(SUOYI 카탈로그 기반) – 미러링용 공통 정의 ────────────────
+
+const PROD_Nano_Al2O3_4N: Product = {
+  name: "4N 나노 알루미나 / 4N Nano Alumina",
+  cat: "나노소재",
+  formula: "α/γ-Al₂O₃ 99.99%",
+  desc: "순도 99.99%(4N) 나노 알루미나 분말. α상·γ상 결정구조로 입도 100~500 nm 제어가 가능하며, 리튬이온 배터리 분리막 코팅, LED 사파이어 잉곳, 형광체 호스트, 정밀 폴리싱 슬러리, 투명 세라믹의 핵심 소재입니다.",
+  tags: ["4N 99.99%", "분리막 코팅", "α·γ상"],
+  apps: [
+    "리튬이온 배터리 분리막 세라믹 코팅(CCS)",
+    "LED·LD 사파이어 잉곳 원료",
+    "고급 형광체 호스트",
+    "투명 세라믹·치과용 블록",
+    "정밀 CMP/광학 폴리싱 슬러리",
+  ],
+  details: {
+    features: [
+      { title: "초저 금속 불순물", points: ["Na·K·Si·Fe·Ca 각 < 10 ppm", "배터리 안전성 강화"] },
+      { title: "균일한 나노 입도", points: ["D50 100~500 nm 제어", "α상 결정성 우수, 분산성 양호"] },
+      { title: "고온 안정성", points: ["융점 ~2,050°C, 모스경도 9", "단상 α-Al₂O₃ 전환 안정"] },
+      { title: "다양한 결정상 옵션", points: ["γ상: 고비표면적 촉매 담체", "α상: 고밀도 소결·연마 슬러리"] },
+    ],
+    sizingTable: {
+      title: "입자 크기별 추천 용도",
+      intro: "4N 나노 알루미나의 입도(D50) 범위와 대표 적용 분야입니다.",
+      headers: ["D50 (nm)", "주요 결정상", "대표 용도"],
+      rows: [
+        ["100 ~ 200", "γ-Al₂O₃", "촉매 담체, 흡착제"],
+        ["200 ~ 500", "α-Al₂O₃", "분리막 코팅(CCS), 정밀 CMP 슬러리"],
+        ["500 ~ 1,000", "α-Al₂O₃", "투명 세라믹, 사파이어 잉곳 원료"],
+      ],
+    },
+  },
+};
+
+const PROD_Nano_Al2O3_5N: Product = {
+  name: "5N 고순도 나노 알루미나 / 5N High Purity Nano Alumina",
+  cat: "나노소재",
+  formula: "α-Al₂O₃ 99.999%",
+  desc: "순도 99.999%(5N) 초고순도 나노 α-알루미나. 마이크로 LED 기판, 단결정 사파이어 성장, OLED 박막 봉지(TFE) 보호층, 고출력 레이저 호스트, 차세대 반도체 공정용 초고순도 세라믹의 핵심 원료입니다.",
+  tags: ["5N 99.999%", "마이크로 LED", "반도체급"],
+  apps: ["마이크로 LED 기판", "단결정 사파이어 성장", "OLED 봉지 보호층", "고출력 레이저 호스트", "ALD/CVD용 알루미나 전구체 원료"],
+  details: {
+    features: [
+      { title: "초고순도 5N (99.999%)", points: ["Na·K·Fe 각 < 1 ppm", "Si·Ca·Mg·Cu·Ni 각 ppb 수준 관리"] },
+      { title: "고결정성 α상", points: ["1,200°C↑ 소성 α-Al₂O₃", "균일 입도·낮은 응집"] },
+    ],
+  },
+};
+
+const PROD_Nano_Al2O3_Disp: Product = {
+  name: "나노 알루미나 분산액 / Nano Alumina Dispersion",
+  cat: "나노소재",
+  formula: "Al₂O₃ Dispersion",
+  desc: "수계·용제계 나노 알루미나 분산액(고형분 20~40%). 평균 입도 50~200 nm로 안정 분산되어 코팅 첨가제, CMP 슬러리, 잉크젯 잉크, 분리막 코팅, 광학 하드코팅에 즉시 사용 가능한 형태로 공급됩니다.",
+  tags: ["분산액", "20~40% 고형분", "코팅용"],
+  apps: ["분리막 세라믹 코팅 슬러리", "CMP·광학 폴리싱 슬러리", "하드코트·반사방지 코팅", "잉크젯·기능성 잉크", "투명 도전성 필름"],
+};
+
+const PROD_Nano_TiO2: Product = {
+  name: "나노 이산화티타늄 / Nano Titanium Dioxide",
+  cat: "나노소재",
+  formula: "TiO₂ (Anatase / Rutile)",
+  desc: "고광촉매·고은폐력 나노 TiO₂ 분말. 결정상(Anatase·Rutile)과 입도(10~100 nm)를 용도별로 선택할 수 있으며, 광촉매 항균·셀프클리닝, 자외선 차단(선스크린·코팅), DSSC 태양전지, 백색 안료 등에 광범위 사용됩니다.",
+  tags: ["광촉매", "UV 차단", "Anatase·Rutile"],
+  apps: ["광촉매 항균·셀프클리닝 코팅", "자외선 차단 화장품·코팅", "염료감응 태양전지(DSSC)", "고급 백색 안료", "공기·수처리 정화재"],
+  details: {
+    features: [
+      { title: "결정상 선택", points: ["Anatase: 고광촉매 활성", "Rutile: 고굴절·UV 차단·내후성"] },
+      { title: "초미세 나노 입도", points: ["D50 10~100 nm 제어", "고분산·고은폐력"] },
+      { title: "표면 처리 옵션", points: ["실리카·알루미나 코팅 가능", "화장품·수지용 친유 표면처리"] },
+    ],
+  },
+};
+
+const PROD_Nano_TiO2_Disp: Product = {
+  name: "나노 이산화티타늄 분산액 / Nano TiO₂ Dispersion",
+  cat: "나노소재",
+  formula: "TiO₂ Dispersion",
+  desc: "수계·알코올계 나노 TiO₂ 분산액(고형분 10~30%). 항균·셀프클리닝 코팅, 광촉매 도료, 자외선 차단 화장품 베이스, 투명 단열 필름 등에 즉시 적용 가능한 안정 분산 제품입니다.",
+  tags: ["분산액", "광촉매", "UV"],
+  apps: ["광촉매 셀프클리닝 도료", "투명 자외선 차단 필름", "항균 코팅 첨가제", "DSSC 페이스트", "기능성 화장품 베이스"],
+};
+
+const PROD_Nano_ZrO2: Product = {
+  name: "나노 지르코니아 / Nano Zirconia",
+  cat: "나노소재",
+  formula: "ZrO₂ / YSZ",
+  desc: "고강도·고인성 나노 지르코니아 분말(순수 ZrO₂ 및 이트리아 안정화 YSZ). 입도 50~200 nm로 치과용 블록, 정밀 세라믹, 산소센서, 고체산화물 연료전지(SOFC) 전해질, 정밀 폴리싱 슬러리 원료로 사용됩니다.",
+  tags: ["치과", "SOFC", "YSZ"],
+  apps: ["치과 크라운·임플란트 블록", "정밀 세라믹 부품·페룰", "산소센서·SOFC 전해질", "정밀 CMP 폴리싱 슬러리", "내마모 코팅"],
+  details: {
+    features: [
+      { title: "변형강화 인성", points: ["t→m 상전이 균열 억제", "파괴인성 6~10 MPa·m¹/²"] },
+      { title: "나노 입도", points: ["D50 50~200 nm", "고소결성·고치밀도"] },
+    ],
+  },
+};
+
+const PROD_Nano_ZrO2_Disp: Product = {
+  name: "나노 지르코니아 분산액 / Nano Zirconia Dispersion",
+  cat: "나노소재",
+  formula: "ZrO₂ Dispersion",
+  desc: "수계·용제계 나노 지르코니아 분산액. 정밀 폴리싱 슬러리, 고굴절 광학 코팅, 세라믹 잉크, 치과용 슬러리 등 고기능 응용을 위한 안정 분산형 제품입니다.",
+  tags: ["분산액", "광학", "폴리싱"],
+  apps: ["정밀 폴리싱 슬러리", "고굴절 광학 코팅", "치과용 3D 프린팅 슬러리", "세라믹 잉크젯 잉크"],
+};
+
+const PROD_Nano_SiO2: Product = {
+  name: "나노 실리카 / Nano Silica",
+  cat: "나노소재",
+  formula: "SiO₂",
+  desc: "기상법·졸겔법으로 제조된 나노 실리카(SiO₂) 분말. 비표면적이 매우 크고 표면 실라놀기(Si-OH)가 풍부하여 고분자 보강, 요변·침강방지, 방열 필러, 화장품, CMP 슬러리, 단열재(VIP) 심재 등 광범위 응용에 적합합니다.",
+  tags: ["나노", "보강", "CMP"],
+  apps: ["고분자 보강·요변제", "정밀 반도체 CMP 슬러리", "방열·단열 필러(VIP)", "화장품·치약 흡유제", "광학·하드코트 첨가제"],
+  details: {
+    features: [
+      { title: "초미세 1차 입자", points: ["7~50 nm", "BET 50~400 m²/g"] },
+      { title: "표면 개질 옵션", points: ["친수성·친유성(HMDS·실란 처리)", "용제·수지 호환성 향상"] },
+    ],
+  },
+};
+
+const PROD_Nano_ZnO: Product = {
+  name: "나노 산화아연 / Nano Zinc Oxide",
+  cat: "나노소재",
+  formula: "ZnO",
+  desc: "나노 산화아연(ZnO) 분말. 자외선 차단(UV-A·UV-B 광범위 흡수), 항균, 광촉매, 고무 가황 활성제, 투명 도전막(TCO)용 ZnO/AZO 원료로 사용됩니다. 입도 20~100 nm 제어 가능.",
+  tags: ["UV 차단", "항균", "TCO"],
+  apps: ["자외선 차단 화장품·코팅", "항균·소취 도료·섬유", "고무 가황 활성제", "투명 도전막(AZO) 원료", "광촉매·가스센서"],
+  details: {
+    features: [
+      { title: "광범위 UV 차단", points: ["UV-A·UV-B 동시 차폐", "투명성 우수(가시광 투과)"] },
+      { title: "항균·소취 활성", points: ["대장균·황색포도상구균 99%↑ 항균", "광촉매 활성 부여"] },
+    ],
+  },
+};
+
+const PROD_Nano_MgO: Product = {
+  name: "나노 산화/수산화 마그네슘 / Nano MgO & Mg(OH)₂",
+  cat: "나노소재",
+  formula: "MgO / Mg(OH)₂",
+  desc: "고비표면적 나노 산화마그네슘(MgO) 및 수산화마그네슘(Mg(OH)₂) 분말. 친환경 무할로겐 난연제, 산성 가스 흡착·중화, 고온 절연재, 전선 절연 보호막, 첨단 세라믹 소결 조제로 사용됩니다.",
+  tags: ["난연", "흡착", "절연"],
+  apps: ["무할로겐 친환경 난연제(케이블·플라스틱)", "산성 가스·VOC 흡착제", "전선·전자부품 절연재", "PDP 보호막", "고온 세라믹 소결 조제"],
+};
+
+const PROD_Nano_Ag: Product = {
+  name: "나노 실버 항균제 / Nano Silver Anti-bacterial",
+  cat: "나노소재",
+  formula: "Ag",
+  desc: "나노 실버(Ag) 분말 및 분산액. 광범위 항균·항바이러스 활성(99.9%↑)으로 의료기기, 항균 섬유·필터, 식품 포장, 도전성 잉크, 전자기기 코팅에 사용됩니다. 입도 20~100 nm.",
+  tags: ["항균 99.9%", "도전성", "Ag"],
+  apps: ["의료·위생용 항균 코팅", "항균 섬유·마스크·필터", "도전성 잉크·페이스트", "투명 전극(터치 패널)", "식품 포장 항균 필름"],
+  details: {
+    features: [
+      { title: "광범위 항균·항바이러스", points: ["대장균·황색포도상구균 99.9%↑", "곰팡이·바이러스 억제"] },
+      { title: "고전도성", points: ["인쇄전자·도전성 잉크 적용", "저온 소결 가능"] },
+    ],
+  },
+};
+
+const PROD_Nano_ATO: Product = {
+  name: "나노 ATO (안티몬 도핑 산화주석) / Nano ATO",
+  cat: "나노소재",
+  formula: "Sb-SnO₂",
+  desc: "안티몬 도핑 산화주석(ATO) 나노 분말 및 분산액. 높은 적외선(IR) 차단 성능과 전기 전도성을 동시에 제공하여 차열 유리·필름, 투명 발열체, 정전기 방지 코팅, 투명 전극에 사용됩니다.",
+  tags: ["IR 차단", "투명 전도", "차열"],
+  apps: ["건축·자동차 차열 유리·필름", "투명 발열체(LFH)", "정전기 방지(ESD) 코팅", "투명 전극·디스플레이 코팅"],
+};
+
+const PROD_Nano_RareEarth: Product = {
+  name: "나노 희토류 산화물 시리즈 / Nano Rare-Earth Oxide Series",
+  cat: "나노소재",
+  formula: "CeO₂ · La₂O₃ · Nd₂O₃ · Pr₆O₁₁ · Gd₂O₃ · Sm₂O₃",
+  desc: "나노 희토류 산화물 시리즈. 산화세륨(CeO₂)·산화란탄(La₂O₃)·산화네오디뮴(Nd₂O₃) 등 고순도(99.9%↑) 나노 분말을 50~200 nm 입도로 공급합니다. 자동차 촉매, 정밀 폴리싱, 형광체, 자성 재료, 고굴절 광학 유리의 핵심 첨가제입니다.",
+  tags: ["CeO₂", "촉매", "폴리싱", "99.9%↑"],
+  apps: ["자동차 배기가스 3원 촉매(CeO₂)", "유리·반도체 CMP 폴리싱(CeO₂)", "형광체·레이저 호스트(Nd₂O₃·Gd₂O₃)", "고굴절 광학 유리(La₂O₃)", "고온 초전도체·자성 재료"],
+  details: {
+    features: [
+      { title: "고순도 99.9% 이상", points: ["타 희토류 교차오염 < 100 ppm", "용도별 단일 산화물 공급"] },
+      { title: "균일 나노 입도", points: ["D50 50~200 nm 제어", "분산성·반응성 우수"] },
+    ],
+    appSections: [
+      { title: "🚗 촉매 (Catalysts)", rows: [
+        { use: "자동차 배기가스 3원 촉매", role: "산소 저장체(OSC) – CeO₂", note: "CO·HC·NOx 동시 저감" },
+        { use: "VOC 산화 촉매", role: "활성 산소 공급체" },
+      ]},
+      { title: "💎 폴리싱 (Polishing)", rows: [
+        { use: "디스플레이 유리 CMP", role: "CeO₂ 폴리싱 슬러리", note: "표면조도 < Å" },
+        { use: "반도체 STI CMP", role: "CeO₂ 슬러리", note: "산화막 평탄화" },
+      ]},
+      { title: "📡 형광·자성·광학", rows: [
+        { use: "형광체 호스트", role: "Eu·Tb 도핑 모체" },
+        { use: "고굴절 광학 유리", role: "La₂O₃ 첨가제" },
+        { use: "Nd-YAG 레이저", role: "Nd₂O₃ 활성 이온" },
+      ]},
+    ],
+  },
+};
+
+const PROD_Nano_IronOxide: Product = {
+  name: "나노 산화철 (Fe₃O₄ / Fe₂O₃) / Nano Iron Oxide",
+  cat: "나노소재",
+  formula: "Fe₃O₄ · α-Fe₂O₃",
+  desc: "나노 사산화삼철(Fe₃O₄, 자성)과 산화제이철(α-Fe₂O₃, 적색) 분말. MRI 조영제, 자성 유체, 자기 분리, 리튬-철 배터리 전구체, 전자파 흡수재, 고급 적색 안료 등 광범위 응용에 사용됩니다.",
+  tags: ["자성", "MRI", "안료"],
+  apps: ["MRI 조영제·표적 약물전달", "자성 유체·자기 분리", "전자파 흡수(EMI) 소재", "리튬-철 배터리 전구체", "고급 적색 안료·페라이트"],
+  details: {
+    features: [
+      { title: "초상자성(Fe₃O₄)", points: ["10~30 nm 단일자구", "MRI·자기분리 응용"] },
+      { title: "고채도 적색(α-Fe₂O₃)", points: ["내광·내후 안료", "도료·화장품·세라믹 안료"] },
+    ],
+  },
+};
+
+const PROD_Nano_PolishingPowder: Product = {
+  name: "나노 폴리싱 파우더 시리즈 / Nano Polishing Powder Series",
+  cat: "나노소재",
+  formula: "CeO₂ · Al₂O₃ · ZrO₂ · SiO₂ · Diamond",
+  desc: "고정밀 폴리싱용 나노 세라믹 파우더 시리즈. CeO₂(유리·실리콘 CMP), α-Al₂O₃(하드디스크·금속), ZrO₂(광학), 콜로이달 실리카(웨이퍼 최종 CMP), 나노 다이아몬드(초경) 등 용도별 입도(30~500 nm) 최적 제품을 공급합니다.",
+  tags: ["CMP", "정밀 폴리싱", "30~500 nm"],
+  apps: ["반도체 웨이퍼 CMP", "LCD·OLED 유리 폴리싱", "보석·렌즈 광학 폴리싱", "하드디스크 표면 폴리싱", "정밀 금형·금속 미세연마"],
+  sizingTable: undefined,
+  details: {
+    sizingTable: {
+      title: "재료별 권장 입도 / 용도",
+      intro: "각 폴리싱 파우더의 입도(D50)와 대표 적용 분야입니다.",
+      headers: ["재료", "D50 (nm)", "대표 용도"],
+      rows: [
+        ["CeO₂ (세리아)", "100 ~ 500", "디스플레이 유리·반도체 STI CMP"],
+        ["α-Al₂O₃", "200 ~ 500", "하드디스크·사파이어·금속 폴리싱"],
+        ["콜로이달 SiO₂", "30 ~ 100", "실리콘 웨이퍼 최종 CMP"],
+        ["ZrO₂", "100 ~ 300", "광학 부품·정밀 세라믹 폴리싱"],
+        ["나노 다이아몬드", "30 ~ 200", "초경합금·보석·정밀 광학"],
+      ],
+    },
+  },
+};
+
+const PROD_Nano_PolishingLiquid: Product = {
+  name: "나노 폴리싱 슬러리 시리즈 / Nano Polishing Liquid (Slurry) Series",
+  cat: "나노소재",
+  formula: "CMP Slurry",
+  desc: "수계 나노 폴리싱 슬러리(CMP). CeO₂·콜로이달 SiO₂·α-Al₂O₃ 입자를 안정 분산시킨 즉시 사용형 슬러리로, 반도체 웨이퍼·디스플레이 유리·광학 부품의 초정밀 평탄화 가공에 사용됩니다.",
+  tags: ["CMP 슬러리", "즉시 사용형"],
+  apps: ["반도체 웨이퍼 CMP", "LCD·OLED 유리 정밀 폴리싱", "광학 렌즈·프리즘 폴리싱", "사파이어·세라믹 기판 폴리싱"],
+};
+
 // ──────────────── 카테고리 정의 ────────────────
+
 
 export const CATEGORIES: Category[] = [
   // 1. 용융실리카 (유지)
