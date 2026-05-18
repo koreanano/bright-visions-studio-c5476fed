@@ -1,5 +1,5 @@
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { Home, Search } from "lucide-react";
+import { ArrowLeft, ArrowRight, Search } from "lucide-react";
 import { useState } from "react";
 import { CATEGORIES, getCategory, slugify, type CategoryKey } from "@/data/products";
 import {
