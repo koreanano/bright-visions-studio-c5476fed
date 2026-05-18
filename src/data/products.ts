@@ -739,6 +739,16 @@ export const CATEGORIES: Category[] = [
         tags: ["고순도", "내화", "다용도"],
         apps: ["내화벽돌·도가니·노 라이닝", "제산제·완하제·Mg 보충제", "마그네시아 시멘트", "산성 폐수·배연 중화", "전선 절연재·PDP 보호막"],
       },
+      // 나노소재 미러링
+      PROD_Nano_SiO2,
+      PROD_Nano_TiO2,
+      PROD_Nano_TiO2_Disp,
+      PROD_Nano_ZrO2,
+      PROD_Nano_ZrO2_Disp,
+      PROD_Nano_ZnO,
+      PROD_Nano_MgO,
+      PROD_Nano_ATO,
+      PROD_Nano_IronOxide,
     ],
   },
 
@@ -892,6 +902,10 @@ export const CATEGORIES: Category[] = [
         tags: ["99.998%", "HPA 전구체"],
         apps: ["HPA 합성용 출발 원료", "초고순도 합금", "스퍼터링 타겟"],
       },
+      // 나노소재 미러링 (나노 알루미나 시리즈)
+      PROD_Nano_Al2O3_4N,
+      PROD_Nano_Al2O3_5N,
+      PROD_Nano_Al2O3_Disp,
     ],
   },
 
