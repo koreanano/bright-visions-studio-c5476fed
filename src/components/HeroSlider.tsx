@@ -22,7 +22,7 @@ const slides: Slide[] = [
     type: "image",
     src: hero1,
     eyebrow: "Advanced Materials · 첨단 무기소재",
-    titleEn: "Engineering",
+    titleEn: "Engineered",
     highlight: "Precision",
     titleEnEnd: "Materials.",
     subtitleKr: "정밀 무기소재 · 고순도 원료 전문",
