@@ -71,12 +71,14 @@ const CategoryNav = () => {
                 }
               />
             </SelectTrigger>
-            <SelectContent>
-              {currentCat?.items.map((p) => (
-                <SelectItem key={p.name} value={slugify(p.name)} className="text-xs">
-                  {p.name}
-                </SelectItem>
-              ))}
+            <SelectContent className="max-h-[80vh] w-[min(900px,92vw)]">
+              <div className="grid grid-cols-1 gap-x-2 sm:grid-cols-2 lg:grid-cols-3">
+                {currentCat?.items.map((p) => (
+                  <SelectItem key={p.name} value={slugify(p.name)} className="text-xs">
+                    {p.name}
+                  </SelectItem>
+                ))}
+              </div>
             </SelectContent>
           </Select>
         </div>
