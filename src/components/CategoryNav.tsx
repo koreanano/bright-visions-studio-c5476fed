@@ -123,7 +123,7 @@ const CategoryNav = () => {
               </Link>
             );
           })}
-          <form onSubmit={onSearch} className="ml-auto flex shrink-0 items-center gap-1 rounded-full border border-border bg-background px-3 py-1.5 focus-within:border-accent">
+          <form onSubmit={onSearch} className="flex shrink-0 items-center gap-1 rounded-full border border-border bg-background px-3 py-1.5 focus-within:border-accent">
             <Search className="h-3.5 w-3.5 text-muted-foreground" />
             <input
               value={q}
