@@ -16,9 +16,11 @@ import imgRareearth from "@/assets/hero-rareearth.jpg";
 import imgCorundum from "@/assets/hero-corundum.jpg";
 import imgNitride from "@/assets/hero-nitride.jpg";
 import imgManganese from "@/assets/hero-mn.jpg";
+import imgSilicaGel from "@/assets/products/silicagel/cat-silicagel.jpg";
 
 const CAT_IMG: Record<CategoryKey, string> = {
   quartz: imgQuartz,
+  silicagel: imgSilicaGel,
   nano: imgNano,
   carbonates: imgCarbonate,
   fluorides: imgFluoride,

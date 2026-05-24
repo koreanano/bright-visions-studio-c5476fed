@@ -80,7 +80,7 @@ const CategoryNav = () => {
         </div>
 
         {/* Pills + search */}
-        <div className="flex items-center gap-2 overflow-x-auto py-3 scrollbar-hide">
+        <div className="flex flex-wrap items-center gap-2 py-3">
           <button
             type="button"
             onClick={() => navigate(-1)}
