@@ -47,7 +47,7 @@ const ProductsList = () => {
 
       <section className="pb-28">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-6">
             {items.map((p, i) => {
               const cat = (p as any)._cat;
               const img = getProductImage(p.name);
