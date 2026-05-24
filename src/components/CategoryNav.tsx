@@ -42,12 +42,14 @@ const CategoryNav = () => {
             <SelectTrigger className="h-9 w-[200px] text-xs font-semibold">
               <SelectValue placeholder="카테고리 선택" />
             </SelectTrigger>
-            <SelectContent>
-              {CATEGORIES.map((c) => (
-                <SelectItem key={c.key} value={c.key} className="text-xs">
-                  {c.kr} · {c.en}
-                </SelectItem>
-              ))}
+            <SelectContent className="max-h-[80vh] w-[min(720px,90vw)]">
+              <div className="grid grid-cols-2 gap-x-2 md:grid-cols-3">
+                {CATEGORIES.map((c) => (
+                  <SelectItem key={c.key} value={c.key} className="text-xs">
+                    {c.kr} · {c.en}
+                  </SelectItem>
+                ))}
+              </div>
             </SelectContent>
           </Select>
 
@@ -69,12 +71,14 @@ const CategoryNav = () => {
                 }
               />
             </SelectTrigger>
-            <SelectContent>
-              {currentCat?.items.map((p) => (
-                <SelectItem key={p.name} value={slugify(p.name)} className="text-xs">
-                  {p.name}
-                </SelectItem>
-              ))}
+            <SelectContent className="max-h-[80vh] w-[min(900px,92vw)]">
+              <div className="grid grid-cols-1 gap-x-2 sm:grid-cols-2 lg:grid-cols-3">
+                {currentCat?.items.map((p) => (
+                  <SelectItem key={p.name} value={slugify(p.name)} className="text-xs">
+                    {p.name}
+                  </SelectItem>
+                ))}
+              </div>
             </SelectContent>
           </Select>
         </div>
@@ -123,7 +127,7 @@ const CategoryNav = () => {
               </Link>
             );
           })}
-          <form onSubmit={onSearch} className="ml-auto flex shrink-0 items-center gap-1 rounded-full border border-border bg-background px-3 py-1.5 focus-within:border-accent">
+          <form onSubmit={onSearch} className="flex shrink-0 items-center gap-1 rounded-full border border-border bg-background px-3 py-1.5 focus-within:border-accent">
             <Search className="h-3.5 w-3.5 text-muted-foreground" />
             <input
               value={q}
