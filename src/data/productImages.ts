@@ -45,6 +45,14 @@ import magnesium from "@/assets/products/magnesium.jpg";
 import cordierite from "@/assets/products/cordierite.jpg";
 import zrsio4 from "@/assets/products/zrsio4.jpg";
 import magnesiumOxide from "@/assets/products/magnesium-oxide.jpg";
+import sgMicrosilica from "@/assets/products/silicagel/microsilica.jpg";
+import sgAntiblocking from "@/assets/products/silicagel/antiblocking.jpg";
+import sgMatting from "@/assets/products/silicagel/matting.jpg";
+import sgLargepore from "@/assets/products/silicagel/largepore.jpg";
+import sgFng from "@/assets/products/silicagel/fng.jpg";
+import sgCoarsepore from "@/assets/products/silicagel/coarsepore.jpg";
+import sgTypea from "@/assets/products/silicagel/typea.jpg";
+import sgTypeb from "@/assets/products/silicagel/typeb.jpg";
 
 // Match by exact product name (Korean / English)
 export const PRODUCT_IMAGES: Record<string, string> = {
@@ -104,6 +112,15 @@ export const PRODUCT_IMAGES: Record<string, string> = {
   "4N 나노 알루미나 / 4N Nano Alumina": nanoAlumina,
   "5N 고순도 나노 알루미나 / 5N High Purity Nano Alumina": nanoAlumina,
   "나노 알루미나 분산액 / Nano Alumina Dispersion": nanoAlumina,
+  // 실리카겔 카테고리
+  "미분 실리카 / Micronized Silica": sgMicrosilica,
+  "플라스틱 안티블로킹제 / Anti-blocking Agent": sgAntiblocking,
+  "소광제 / Matting Agent": sgMatting,
+  "대공극 실리카겔 / Large Pore Volume Silica Gel": sgLargepore,
+  "내수 실리카겔 (FNG) / FNG Water-Resistant Silica Gel": sgFng,
+  "조공극 실리카겔 / Coarse Pore Silica Gel": sgCoarsepore,
+  "A형 실리카겔 / Silica Gel Type A": sgTypea,
+  "B형 실리카겔 / Silica Gel Type B": sgTypeb,
 };
 
 export const getProductImage = (name: string) => PRODUCT_IMAGES[name];
