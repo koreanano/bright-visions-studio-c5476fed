@@ -9,6 +9,9 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
+      <Helmet>
+        <link rel="canonical" href="https://nano-korea.co.kr/" />
+      </Helmet>
       <Navigation />
       <div id="top" />
       <HeroSlider />
