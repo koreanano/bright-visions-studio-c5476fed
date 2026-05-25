@@ -1,3 +1,5 @@
+#DaumWebMasterTool:ded1e04a5c99595a9d39c5577b543d2b88678bb406888ef0a463d485ba93fcc0:fD9Z8IRMvg2f607DLFCAiQ==
+
 User-agent: Googlebot
 Allow: /
 
